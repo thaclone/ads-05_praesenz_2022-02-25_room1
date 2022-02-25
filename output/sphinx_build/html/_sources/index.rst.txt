@@ -13,12 +13,3 @@ Hallo Welt!
    :caption: Contents:
    
    notebooks/00-index
-
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
