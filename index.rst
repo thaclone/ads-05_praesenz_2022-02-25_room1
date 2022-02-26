@@ -11,6 +11,8 @@ Hallo Welt!
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
-   
+      
    readme
    notebooks/00-index
+   docs/00-index
+   media/01-images

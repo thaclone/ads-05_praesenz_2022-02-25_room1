@@ -1,0 +1,28 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                revenue   R-squared:                       0.592
+Model:                            OLS   Adj. R-squared:                  0.592
+Method:                 Least Squares   F-statistic:                 3.261e+04
+Date:                Sat, 26 Feb 2022   Prob (F-statistic):               0.00
+Time:                        15:30:54   Log-Likelihood:            -8.5326e+05
+No. Observations:               45014   AIC:                         1.707e+06
+Df Residuals:                   45011   BIC:                         1.707e+06
+Df Model:                           2                                         
+Covariance Type:            nonrobust                                         
+================================================================================
+                   coef    std err          t      P>|t|      [0.025      0.975]
+--------------------------------------------------------------------------------
+Intercept    -6.013e+06   6.04e+05     -9.960      0.000    -7.2e+06   -4.83e+06
+budget           2.8310      0.011    253.860      0.000       2.809       2.853
+vote_average  9.349e+05   1.02e+05      9.176      0.000    7.35e+05    1.13e+06
+==============================================================================
+Omnibus:                    72537.859   Durbin-Watson:                   1.958
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):        182126487.472
+Skew:                          10.058   Prob(JB):                         0.00
+Kurtosis:                     313.965   Cond. No.                     5.66e+07
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 5.66e+07. This might indicate that there are
+strong multicollinearity or other numerical problems.
