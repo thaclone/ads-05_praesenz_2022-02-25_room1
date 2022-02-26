@@ -14,7 +14,7 @@ Installation
 
 Dokumentation unserer Präsenz von Gruppe 1:
 Gruppenmitglieder:
-* Marc Hoffmann
-* Yvonne Heinicke
-* Anja Fiedler
-* Mark König
+	* Marc Hoffmann
+	* Yvonne Heinicke
+	* Anja Fiedler
+	* Mark König
