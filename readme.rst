@@ -8,10 +8,13 @@ Installation
 		
 		pip install -r requirements.txt
 
+2. Lade alle Dateien (CSV) in den Input Ordner. Quelle: https://www.kaggle.com/rounakbanik/the-movies-dataset
+ 
+
 
 Dokumentation unserer Präsenz von Gruppe 1:
 Gruppenmitglieder:
-- Marc Hoffmann
-- Yvonne Heinicke
-- Anja Fiedler
-- Mark König
+* Marc Hoffmann
+* Yvonne Heinicke
+* Anja Fiedler
+* Mark König
