@@ -1,0 +1,8 @@
+pandas
+jupyter
+jupyterlab
+seaborn
+sphinx
+pydata-sphinx-theme
+statsmodels
+scikit-learn
