@@ -6,3 +6,4 @@ sphinx
 pydata-sphinx-theme
 statsmodels
 scikit-learn
+nbconvert
