@@ -1,5 +1,0 @@
-Analyse
-=======
-
-
-Beschreibung unserer Methoden

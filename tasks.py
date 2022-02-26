@@ -2,38 +2,50 @@ import os
 from invoke import task
 
 @task
-def welcome(c):
-    print("Hallo und herzlich willkommen!")
-
-@task
-def mydir(c):
-    print("Dein aktuelles Arbeitsverzeichnis ist:")
-    c.run("pwd")
+def clear_output(c):
+    """Clear output directory"""
+    if os.path.exists("output"):
+        c.run("rm -r output")
 
 @task
 def setup(c):
+    """Setup directories"""
     if not os.path.exists("output"):
-        print("Create Output")
         c.run("mkdir output")
-    else:
-        print("Output exists")
 
+@task
+def dwh(c, pty=True):
+    """Generate DWH"""
+    c.run("python lib_py/dwh.py")
 
 @task
 def report(c):
-    import pandas as pd
-    from pandas_profiling import ProfileReport
-    df = pd.read_csv(os.path.join("input", "movies_metadata.csv"))
-    report = ProfileReport(df, minimal=True, title="Aus invoke")
-    report.to_file(os.path.join("output", "invoke_report.html"))
+    """Generate profiling report from DWH"""
+    from lib_py import profile_report
+    profile_report.main()
 
 @task
-def dwh(c):
-    c.run("python lib_py/01_etl_mkoe.py", pty=True)
+def apidoc(c):
+    """Generate RST docs for lib_py"""
+    lib_py_doc_path = os.path.join("docs", "lib_py")
+    if os.path.exists(lib_py_doc_path):
+        c.run("rm -r %s" % lib_py_doc_path)
+    c.run("sphinx-apidoc lib_py -o %s -H Software" % lib_py_doc_path)
 
+@task
+def docs(c):
+    """Generate HTML docs including lib_py"""
+    build_path = os.path.join("_build", "html")
+    apidoc(c)
+    if os.path.exists(build_path):
+        c.run("rm -r %s" % build_path)
+    c.run("sphinx-build . %s" % build_path)
 
 @task
 def full(c):
-    welcome(c)
-    mydir(c)
+    """Full build of our project"""
+    clear_output(c)
+    setup(c)
     dwh(c)
+    report(c)
+    docs(c)
