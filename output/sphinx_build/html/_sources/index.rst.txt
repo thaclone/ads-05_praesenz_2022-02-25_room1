@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to ads-05-grp1's documentation!
+Welcome to ads-05-grp1 documentation!
 =================================================================================
 
 Hallo Welt!
@@ -12,4 +12,5 @@ Hallo Welt!
    :maxdepth: 2
    :caption: Contents:
    
+   readme
    notebooks/00-index
